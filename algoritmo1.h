@@ -1,22 +1,11 @@
 #ifndef ALGORITMO1_H
 #define ALGORITMO1_H
 
-#include <QWidget>
 
-namespace Ui {
-class Algoritmo1;
-}
-
-class Algoritmo1 : public QWidget
+class Algoritmo1
 {
-    Q_OBJECT
-
 public:
-    explicit Algoritmo1(QWidget *parent = nullptr);
-    ~Algoritmo1();
-
-private:
-    Ui::Algoritmo1 *ui;
+    Algoritmo1();
 };
 
 #endif // ALGORITMO1_H

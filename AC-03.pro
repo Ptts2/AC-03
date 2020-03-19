@@ -16,13 +16,17 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    algoritmo1.cpp \
     algoritmo1window.cpp \
+    algoritmo2.cpp \
     algoritmo2window.cpp \
     main.cpp \
     mainwindow.cpp
 
 HEADERS += \
+    algoritmo1.h \
     algoritmo1window.h \
+    algoritmo2.h \
     algoritmo2window.h \
     mainwindow.h
 
