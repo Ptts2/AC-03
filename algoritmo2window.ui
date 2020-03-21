@@ -264,7 +264,7 @@ border-width: 1px
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="tiempo5Alg1">
+  <widget class="QLabel" name="tiempo5Alg2">
    <property name="geometry">
     <rect>
      <x>170</x>
@@ -400,7 +400,7 @@ border-color: rgb(234, 96, 96);
     <string>Media</string>
    </property>
   </widget>
-  <widget class="QLabel" name="tiempoMedioAlg1">
+  <widget class="QLabel" name="tiempoMedioAlg2">
    <property name="geometry">
     <rect>
      <x>150</x>

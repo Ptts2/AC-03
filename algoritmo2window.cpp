@@ -21,3 +21,16 @@ void Algoritmo2Window::on_SelectDirAlg2_pressed()
      this->algoritmo.setArchivo(QFileDialog::getOpenFileName(this, tr("Abrir imagen"), QDir::currentPath(), tr("Archivos de imagen (*.png *.jpg)")));
 
 }
+
+void Algoritmo2Window::on_ResetAlg2_pressed()
+{
+    ui->tiempo1Alg2->setText("");
+    ui->tiempo2Alg2->setText("");
+    ui->tiempo3Alg2->setText("");
+    ui->tiempo4Alg2->setText("");
+    ui->tiempo5Alg2->setText("");
+    ui->tiempoMedioAlg2->setText("");
+
+    this->algoritmo.setArchivo(tr("null"));
+    this->algoritmo.resetTiempos();
+}

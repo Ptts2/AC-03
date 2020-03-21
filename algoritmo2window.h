@@ -19,6 +19,8 @@ public:
 private slots:
     void on_SelectDirAlg2_pressed();
 
+    void on_ResetAlg2_pressed();
+
 private:
     Ui::Algoritmo2Window *ui;
     Algoritmo2 algoritmo;
