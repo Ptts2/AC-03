@@ -15,6 +15,11 @@ void Algoritmo2::setArchivo(QString archivo)
     this->archivo = archivo;
 }
 
+QString Algoritmo2::getFilename()
+{
+    return this->archivo;
+}
+
 QImage Algoritmo2::executeAlg2()
 {
     QImage imagen = QImage(this->archivo);

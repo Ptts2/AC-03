@@ -9,6 +9,7 @@ public:
     Algoritmo2();
     ~Algoritmo2();
     void setArchivo(QString archivo);
+    QString getFilename();
     QImage executeAlg2();
 
 private:

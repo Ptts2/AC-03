@@ -3,7 +3,10 @@
 
 #include "algoritmo2.h"
 #include <QDialog>
-#include <QVector>
+#include <QLabel>
+#include <vector>
+
+
 
 namespace Ui {
 class Algoritmo2Window;
@@ -24,12 +27,10 @@ private slots:
 
     void on_ExecuteAlg2_pressed();
 
-
-
 private:
     Ui::Algoritmo2Window *ui;
     Algoritmo2 algoritmo;
-    std::vector<double> tiempos;
+    std::vector<QLabel*> tiempos;
     QString addNumToFilename(QString filename, int num);
 
 };
