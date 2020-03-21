@@ -428,7 +428,7 @@ border-width: 1px
     <string/>
    </property>
   </widget>
-  <widget class="QPushButton" name="ResetAlg2_2">
+  <widget class="QPushButton" name="SelectDirAlg2">
    <property name="geometry">
     <rect>
      <x>310</x>
