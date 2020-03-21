@@ -21,6 +21,8 @@ private slots:
 
     void on_ResetAlg2_pressed();
 
+    void on_ExecuteAlg2_pressed();
+
 private:
     Ui::Algoritmo2Window *ui;
     Algoritmo2 algoritmo;

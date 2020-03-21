@@ -34,3 +34,12 @@ void Algoritmo2Window::on_ResetAlg2_pressed()
     this->algoritmo.setArchivo(tr("null"));
     this->algoritmo.resetTiempos();
 }
+
+void Algoritmo2Window::on_ExecuteAlg2_pressed()
+{
+
+    QString dir = QFileDialog::getSaveFileName(this, tr("Directorio de guardado de imagenes"), QDir::currentPath(), tr("Archivos de imagen (*.png *.jpg)"));
+    QImage imagenBlancoYNegro = algoritmo.executeAlg2();
+
+    imagenBlancoYNegro.save(dir);
+}
