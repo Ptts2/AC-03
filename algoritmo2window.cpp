@@ -1,6 +1,9 @@
 #include "algoritmo2window.h"
 #include "ui_algoritmo2window.h"
 #include <QFileDialog>
+#include <QMessageBox>
+#include <QPixmap>
+#include <QFileInfo>
 
 Algoritmo2Window::Algoritmo2Window(QWidget *parent) :
     QDialog(parent),
@@ -14,6 +17,25 @@ Algoritmo2Window::~Algoritmo2Window()
 {
     delete ui;
 }
+
+
+QString Algoritmo2Window::addNumToFilename(QString filename, int num)
+{
+    QFileInfo fileInfo(filename);
+
+    QString directorio;
+    QString extension = fileInfo.completeSuffix();
+
+
+    if (!extension.isEmpty()) {
+        extension = "." + extension;
+        directorio = filename.left(filename.size() - extension.size());
+    } else {
+        directorio = filename;
+    }
+    return directorio +QString::number(num)+extension;
+}
+
 
 void Algoritmo2Window::on_SelectDirAlg2_pressed()
 {
@@ -39,7 +61,14 @@ void Algoritmo2Window::on_ExecuteAlg2_pressed()
 {
 
     QString dir = QFileDialog::getSaveFileName(this, tr("Directorio de guardado de imagenes"), QDir::currentPath(), tr("Archivos de imagen (*.png *.jpg)"));
-    QImage imagenBlancoYNegro = algoritmo.executeAlg2();
 
-    imagenBlancoYNegro.save(dir);
+
+    QImage imagenBlancoYNegro = algoritmo.executeAlg2();
+    imagenBlancoYNegro.save(addNumToFilename(dir,1));
+    //Mostrar imagen por pantalla
+    QMessageBox showImage;
+    showImage.setIconPixmap(QPixmap::fromImage(imagenBlancoYNegro));
+    showImage.exec();
+
+
 }

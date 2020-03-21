@@ -23,9 +23,13 @@ private slots:
 
     void on_ExecuteAlg2_pressed();
 
+
+
 private:
     Ui::Algoritmo2Window *ui;
     Algoritmo2 algoritmo;
+    QString addNumToFilename(QString filename, int num);
+
 };
 
 #endif // ALGORITMO2WINDOW_H
