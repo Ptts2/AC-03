@@ -71,7 +71,7 @@ void Algoritmo2Window::on_ResetAlg2_pressed()
 void Algoritmo2Window::on_ExecuteAlg2_pressed()
 {
 
-    if(this->algoritmo.getFilename().toStdString() == ("null"))
+    if(this->algoritmo.getFilename().toStdString() == ("null") || this->algoritmo.getFilename().toStdString().empty())
     {
         QMessageBox errorMessage;
         errorMessage.critical(this,"Error","¡Debes seleccionar una imagen!");
