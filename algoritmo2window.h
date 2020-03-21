@@ -3,6 +3,7 @@
 
 #include "algoritmo2.h"
 #include <QDialog>
+#include <QVector>
 
 namespace Ui {
 class Algoritmo2Window;
@@ -28,6 +29,7 @@ private slots:
 private:
     Ui::Algoritmo2Window *ui;
     Algoritmo2 algoritmo;
+    std::vector<double> tiempos;
     QString addNumToFilename(QString filename, int num);
 
 };

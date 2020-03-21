@@ -54,17 +54,20 @@ void Algoritmo2Window::on_ResetAlg2_pressed()
     ui->tiempoMedioAlg2->setText("");
 
     this->algoritmo.setArchivo(tr("null"));
-    this->algoritmo.resetTiempos();
+    this->tiempos.clear();
 }
 
 void Algoritmo2Window::on_ExecuteAlg2_pressed()
 {
-
     QString dir = QFileDialog::getSaveFileName(this, tr("Directorio de guardado de imagenes"), QDir::currentPath(), tr("Archivos de imagen (*.png *.jpg)"));
+    QImage imagenBlancoYNegro;
 
+    for(int i = 0; i<5; i++)
+    {
+        imagenBlancoYNegro = algoritmo.executeAlg2();
+        imagenBlancoYNegro.save(addNumToFilename(dir,i+1));
+    }
 
-    QImage imagenBlancoYNegro = algoritmo.executeAlg2();
-    imagenBlancoYNegro.save(addNumToFilename(dir,1));
     //Mostrar imagen por pantalla
     QMessageBox showImage;
     showImage.setIconPixmap(QPixmap::fromImage(imagenBlancoYNegro));
