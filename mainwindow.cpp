@@ -15,8 +15,6 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-
-
 void MainWindow::on_botonAlgoritmo1_pressed()
 {
     Algoritmo1Window algoritmo1(this);

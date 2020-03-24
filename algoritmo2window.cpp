@@ -52,7 +52,7 @@ QString Algoritmo2Window::addNumToFilename(QString filename, int num)
 void Algoritmo2Window::on_SelectDirAlg2_pressed()
 {
 
-     this->algoritmo.setArchivo(QFileDialog::getOpenFileName(this, tr("Abrir imagen"), QDir::currentPath(), tr("Archivos de imagen (*.png *.jpg)")));
+    this->algoritmo.setArchivo(QFileDialog::getOpenFileName(this, tr("Abrir imagen"), QDir::currentPath(), tr("Archivos de imagen (*.png *.jpg)")));
 
 }
 
