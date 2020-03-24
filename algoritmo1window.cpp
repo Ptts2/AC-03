@@ -64,7 +64,6 @@ void Algoritmo1Window::on_ExecuteAlg1_clicked()
     double mediaTiempo = 0;
     bool correcto = true;
     int k = 0;
-    int suma = 0;
     while(correcto && k<(int) numeros.size())
     {
         if(numeros[k] < 0)
@@ -84,8 +83,7 @@ void Algoritmo1Window::on_ExecuteAlg1_clicked()
             auto inicio = chrono::high_resolution_clock::now();
             for(int j=0;j<(int) numeros.size();j++)
             {
-                suma = algoritmo.Algoritmo1::fibonacci(numeros[j]);
-                //cout << suma<<endl;
+                algoritmo.Algoritmo1::fibonacci(numeros[j]);
             }
             auto fin = chrono::high_resolution_clock::now();
 
